@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>COSD Start Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="../style/style.css">
+  </head>
+  <body ng-app="myApp" >
+    <!-- Jumbotron and Container Start -->
+    <div class="text-center">
+      <h1>
+        Memory Matching Game
+      </h1>
+    </div>
+    <div class="container">
+      
+        <div class="row">
+            <div class="col">
+              <div class="jumbotron"> 
+                <div ng-controller="myGameCtrl">
+                  <div class="row">
+                    <div class="col-12" class="text-center">
+                      <button ng-click="shuffledCard()" type="button" class="btn btn-dark">
+                        Start Game
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Table Start -->
+                  <div class="row">
+                    <div class="col-2">
+                      <h6><b>Matched Images</b></h6>
+                      <div ng-repeat="x in matchedCard1">
+                        <img src="{{x}}"  class="matched_images"> 
+                      </div>
+                    </div>
+                    <div class="col-8">
+                      <table class= "table table-dark table-borderless table-striped">
+                        <tr ng-repeat="row in cards" ng-class="{open: cards.open}" >
+                          <td ng-repeat="card in row" class="p-1">
+                            <!-- <input type="checkbox" ng-model="myVar"> -->
+                            <img src="../images/logo.png" ng-hide="card.open" ng-click="click(card,$parent.index, $index)" />
+                            <img ng-model="cards.open" ng-show="card.open" ng-src="{{card.url}}" />
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="col-2 ">
+                      <h6><b>Matched Images</b></h6>
+                      <div ng-repeat="z in matchedCard2">
+                        <img src="{{z}}"  class="matched_images"> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+          </div>
+        </div>
+        
+    </div>    
+        
+    <!-- Jumbotron and Container End -->
+    <script></script>
+  </body>
+</html>

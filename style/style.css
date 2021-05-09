@@ -1,0 +1,33 @@
+.jumbotron {
+    min-width: 300px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    margin: 10px 10px 10px 10px;
+    border: 0.08em solid black;
+  }
+  img{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-color: #EEEEEE;
+    cursor: pointer;
+  
+  }
+  img:hover{
+    border: 2px solid rgb(207, 0, 0);
+    outline-offset: -10px;
+  }
+
+  .matched_images{
+    width: 75px;
+    height: 75px;
+    margin-bottom: 10px;
+  }
+  .matched_images:hover{
+    border: none;
+    outline-offset: none;
+    cursor: initial;
+  }
+  
+  

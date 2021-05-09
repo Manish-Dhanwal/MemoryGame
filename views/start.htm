@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>COSD Start Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <!-- Jumbotron and Container Start -->
+    <div class="container" ng-controller="myCtrl">
+        <div class="jumbotron mt-4">
+          <h1 class="p-4">
+            {{ message }}
+          </h1>      
+        </div> 
+        <div class="alert alert-warning pt-4">
+            <p>
+              <strong>{{ alertMessageOne}}</strong>
+              <span>{{ alertMessageTwo }}</span>
+            </p>
+          </div> 
+          <h1>
+              {{ debugInfo}}
+          </h1> 
+          <h1>
+          </h1>
+          <div class="alert alert-info pt-4 mt-4">
+            <p><strong>
+              {{ debugMessage }}
+            </strong></p>
+          </div> 
+      </div>
+    <!-- Jumbotron and Container End -->
+    </div>
+  </body>
+</html>
